@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Refa Dias I Delia</title>
     <link rel="stylesheet" href="cv.css">
+
 </head>
 <body>
     <div class="cv-container">
@@ -144,5 +145,53 @@
             </div>
         </div>
     </div>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Mencegah halaman langsung berpindah
+            
+            let nama = document.querySelector('input[name="nama"]').value;
+            let email = document.querySelector('input[name="email"]').value;
+            let gender = document.querySelector('select[name="gender"]').value;
+            let pesan = document.querySelector('input[name="pesan"]').value;
+    
+            // Simpan data di localStorage
+            localStorage.setItem("nama", nama);
+            localStorage.setItem("email", email);
+            localStorage.setItem("gender", gender);
+            localStorage.setItem("pesan", pesan);
+    
+            // Redirect ke halaman CV
+            window.location.href = "cv.html";
+        });
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let nama = localStorage.getItem("nama");
+        let email = localStorage.getItem("email");
+        let gender = localStorage.getItem("gender");
+        let pesan = localStorage.getItem("pesan");
+
+        if (nama) {
+            document.querySelector(".name h1").innerText = nama;
+        }
+        if (email) {
+            document.querySelector(".info-list a[href^='mailto']").innerText = email;
+        }
+        if (gender) {
+            let genderSection = document.createElement("div");
+            genderSection.innerHTML = `<h3>Jenis Kelamin</h3> <p>${gender}</p>`;
+            document.querySelector(".left-section").appendChild(genderSection);
+        }
+        if (pesan) {
+            let pesanSection = document.createElement("div");
+            pesanSection.innerHTML = `<h3>Pesan</h3> <p>${pesan}</p>`;
+            document.querySelector(".left-section").appendChild(pesanSection);
+        }
+    });
+</script>
+
+    
 </body>
 </html>
+
