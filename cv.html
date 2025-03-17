@@ -3,195 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Refa Dias I Delia</title>
-    <link rel="stylesheet" href="cv.css">
-
+    <title>Hubungi Kami</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            flex-direction: column;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .welcome-text {
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            margin-right: 40px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            animation: bounce 1.5s infinite alternate;
+        }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+        .hubungi-box {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            width: 320px;
+        }
+        .hubungi-box h2 {
+            color: white;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+        }
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: linear-gradient(to right, #0072ff, #00c6ff);
+        }
+    </style>
 </head>
 <body>
-    <div class="cv-container">
-        <div class="header">
-            <img src="refa.jpeg" alt="Foto Profil">
-            <div class="name">
-                <h1>Refa Dias I Delia</h1>
-                <p>Mahasiswa Sistem Informasi</p>
-            </div>
-        </div>
-
-        <div class="content">
-            <div class="left-section">
-                <div class="info-container">
-                    <h3>Kontak</h3>
-                    <div class="info-list">📞 <a href="tel:+6283894529818">+62 838 9452 9818</a></div>
-                    <div class="info-list">📧 <a href="mailto:refadias16@gmail.com">refadias16@gmail.com</a></div>
-                    <div class="info-list">📍<a href="https://maps.app.goo.gl/DQhXfPZ71vgVEW4R7"> Villa Mutiara Pluit</a></div>
-                </div>
-
-                <h3>Social Media</h3>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/fa.dys?igsh=aGc0bWVvcDFpd20w" target="_blank">
-                        <img src="instagram.png" alt="Instagram">
-                    </a>
-                    <a href="https://www.tiktok.com/@diazyyyyyyyyyy?_t=ZS-8uPjlStJIDC&_r=1" target="_blank">
-                        <img src="Tiktok.png" alt="Twitter">
-                    </a>
-                </div>
-
-                <div class="info-container">
-                    <h3>Hobi</h3>
-                    <div class="info-list">🏆 Pencak Silat</div>
-                    <div class="info-list">📖 Membaca Buku</div>
-                    <div class="info-list">🎵 Mendengarkan Musik</div>
-                </div>
-
-                <div class="info-container">
-                    <h3>Soft Skill</h3>
-                    <div class="info-list">✅ Mudah beradaptasi dan membaur dengan orang baru</div>
-                    <div class="info-list">✅ Mampu bekerja sama dalam tim</div>
-                    <div class="info-list">✅ Berpengalaman dalam kegiatan organisasi</div>
-                </div>
-                
-            </div>
-
-            <div class="right-section">
-                <div class="profile-container">
-                    <h2 class="section-title">Profile</h2>
-                    <hr>
-                    <p>Saya adalah mahasiswa Program Studi Sistem Informasi di Telkom University Kampus Jakarta yang aktif dalam berbagai kegiatan akademik, organisasi, dan olahraga. Saya memiliki ketertarikan dalam seni bela diri, khususnya pencak silat, dan telah berpengalaman bertanding di berbagai kejuaraan.</p>
-                </div>
-
-                <div class="education-container">
-                    <h2 class="section-title">👩🏻‍🎓 Pendidikan</h2>
-                    <hr>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <div class="timeline-date">2011 - 2017</div>
-                                <h3>SDN Periuk 6 Kota Tangerang</h3>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <div class="timeline-date">2017 - 2020</div>
-                                <h3>SMPN 12 Kota Tangerang</h3>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <div class="timeline-date">2020 - 2023</div>
-                                <h3>SMAN 15 Kota Tangerang (IPA)</h3>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <div class="timeline-date">2023 - Sekarang</div>
-                                <h3>Telkom University (Sistem Informasi)</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="experience-container">
-                    <h2 class="section-title">🗣️ Pengalaman</h2>
-                    <hr>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <div class="timeline-date">2019 - 2020</div>
-                                <h3>OSIS SMPN 12 Kota Tangerang (Anggota)</h3>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <div class="timeline-date">2021 - 2022</div>
-                                <h3>Forum Anak Kecamatan (Sekretaris)</h3>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <div class="timeline-date">2022 - 2023</div>
-                                <h3>OSIS SMAN 15 Kota Tangerang (Anggota)</h3>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <div class="timeline-date">2023 - Sekarang</div>
-                                <h3>Pelatih Perguruan Bela Diri Matahari</h3>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <div class="timeline-date">2023 - Sekarang</div>
-                                <h3>Wasit juri silat Kota Tangerang</h3>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <div class="timeline-date">2023 - Sekarang</div>
-                                <h3>Himpunan Mahasiswa Sistem Informasi (Humas)</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+        <div class="welcome-text">HELLOOO!! <br> Selamat Datang ◜ ‿ ◝</div>
+        <div class="hubungi-box">
+            <h2>Hubungi </h2>
+            <form>
+                <input type="text" placeholder="Nama" required>
+                <input type="email" placeholder="Email" required>
+                <select required>
+                    <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+                <input type="date" required>
+                <textarea placeholder="Pesan" rows="4" required></textarea>
+                <button type="submit" class="btn">Kirim</button>
+            </form>
         </div>
     </div>
-    <script>
-        document.querySelector("form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Mencegah halaman langsung berpindah
-            
-            let nama = document.querySelector('input[name="nama"]').value;
-            let email = document.querySelector('input[name="email"]').value;
-            let gender = document.querySelector('select[name="gender"]').value;
-            let pesan = document.querySelector('input[name="pesan"]').value;
-    
-            // Simpan data di localStorage
-            localStorage.setItem("nama", nama);
-            localStorage.setItem("email", email);
-            localStorage.setItem("gender", gender);
-            localStorage.setItem("pesan", pesan);
-    
-            // Redirect ke halaman CV
-            window.location.href = "cv.html";
-        });
-    </script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        let nama = localStorage.getItem("nama");
-        let email = localStorage.getItem("email");
-        let gender = localStorage.getItem("gender");
-        let pesan = localStorage.getItem("pesan");
-
-        if (nama) {
-            document.querySelector(".name h1").innerText = nama;
-        }
-        if (email) {
-            document.querySelector(".info-list a[href^='mailto']").innerText = email;
-        }
-        if (gender) {
-            let genderSection = document.createElement("div");
-            genderSection.innerHTML = `<h3>Jenis Kelamin</h3> <p>${gender}</p>`;
-            document.querySelector(".left-section").appendChild(genderSection);
-        }
-        if (pesan) {
-            let pesanSection = document.createElement("div");
-            pesanSection.innerHTML = `<h3>Pesan</h3> <p>${pesan}</p>`;
-            document.querySelector(".left-section").appendChild(pesanSection);
-        }
-    });
-</script>
-
-    
 </body>
 </html>
-
